@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import EmployeeForm from './@forms/EmployeeForm';
+import EmployeeList from './@forms/EmployeeList';
+import { Routes, Route} from'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <Routes>
+          <Route path="/employee" element={<EmployeeForm />} />
+          <Route path="/employees" element={<EmployeeList />} />
+          <Route path="*" element={<h2>Not Found!</h2>} />
+      </Routes>
+  )
 }
 
 export default App;

@@ -1,0 +1,1 @@
+export {default as _api} from './axios/api';
